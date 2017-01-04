@@ -14,9 +14,10 @@ public class Common {
     }
     public static void show(Comparable[] a){
         for (int i = 0;i<a.length;i++){
-            System.out.println(a[i]+" ");
+            System.out.print(a[i]+" ");
 
         }
+        System.out.println();
 
     }
     public static boolean isSorted(Comparable[] a){
