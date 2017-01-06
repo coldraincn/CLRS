@@ -45,7 +45,7 @@ public class E235 {
         Integer[] a={6,3,2,5,4,7,9,7};
         Integer[] b={1,2,3,4,5,6,7,8};
         // Integer[] a={6,3,2};
-       MergeSort.sort(a,0,7);
+       MergeSort.mergesort(a);
         int i=BinarySearch(a,0,7,4);
         System.out.println(i);
        Common.show(a);

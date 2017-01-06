@@ -13,11 +13,16 @@ public class MergeSort {
         }
 
     }
+    public static void mergesort(Comparable[] A){
+        int p=0;
+        int r=A.length-1;
+        sort(A,p,r);
+    }
     public static void main(String[] args) {
 
         Integer[] a={6,3,2,5,4,7,9,7};
         // Integer[] a={6,3,2};
-        sort(a,0,7);
+        mergesort(a);
         Common.show(a);
     }
 

@@ -4,6 +4,7 @@ import C02.Common;
 
 /**
  * Created by hd on 2017/1/5.
+ * 移动数据仍为n！
  */
 public class E236 {
     public static void InsertionSort(Comparable[] a){
@@ -18,28 +19,33 @@ public class E236 {
                     a[s+1]=a[s];
                 a[k]=key;
             }
-//            while (i>k){
-//                a[i+1]=a[i];
-//                i--;
-//            }
-
 
         }
 
     }
     public static int BinarySearch(Comparable[] A,int p,int r,Comparable key){
         int q=(p+r)/2;
-
-        if(p<=r) {
+        //Integer[] a={6,3,2,5,4,7,9,7};
+        if(p<r) {
             if (A[q].compareTo(key)<=0&&A[q+1].compareTo(key)>=0) {
                 return q+1;
             }
             if (A[q].compareTo(key) < 0) {
                 return  BinarySearch(A, q + 1, r, key);
             }
-            if (A[q].compareTo(key) > 0){
+            if (A[q].compareTo(key) > 0&&q-1>=p){
                 return BinarySearch(A, p, q - 1, key);
             }
+            if (A[q].compareTo(key) > 0&&q-1<p){
+                return p;
+            }
+        }else if(p==r){
+            if (A[p].compareTo(key)<=0) {
+                return p+1;
+            }else{
+                return p;
+            }
+
         }
         return -1;
     }
