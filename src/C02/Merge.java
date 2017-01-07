@@ -31,7 +31,7 @@ public class Merge {
             }
         }
     }
-    private static void merge(Comparable[] A, Comparable[] aux, int p, int q, int r) {
+    public static void merge(Comparable[] A, Comparable[] aux, int p, int q, int r) {
 
 
         // copy to aux[]
