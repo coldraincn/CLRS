@@ -29,7 +29,7 @@ public class MergeSort {
 
     }
     public static void mergesort2(Comparable[] A){
-        Comparable[] aux = new Comparable[A.length];
+
         int p=0;
         int r=A.length-1;
         sort(A,p,r);
