@@ -1,5 +1,7 @@
 package C02;
 
+import java.util.Objects;
+
 /**
  * Created by hd on 2017/1/3.
  */
@@ -18,6 +20,12 @@ public class Common {
 
         }
         System.out.println();
+
+    }
+    public static void show(Objects a){
+
+
+        System.out.println(a);
 
     }
     public static boolean isSorted(Comparable[] a){
